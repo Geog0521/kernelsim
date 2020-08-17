@@ -231,36 +231,6 @@
             <property name="bottomMargin">
              <number>0</number>
             </property>
-            <item row="3" column="0">
-             <widget class="QLabel" name="label_2">
-              <property name="text">
-               <string>Lower bound value</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLineEdit" name="Min_value">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="inputMethodHints">
-               <set>Qt::ImhFormattedNumbersOnly</set>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="0">
-             <widget class="QLabel" name="label_3">
-              <property name="text">
-               <string>Upper bound value</string>
-              </property>
-             </widget>
-            </item>
             <item row="5" column="1">
              <widget class="QLineEdit" name="Max_value">
               <property name="sizePolicy">
@@ -281,10 +251,40 @@
               </property>
              </widget>
             </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Upper bound value</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="Min_value">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="inputMethodHints">
+               <set>Qt::ImhFormattedNumbersOnly</set>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Lower bound value</string>
+              </property>
+             </widget>
+            </item>
             <item row="6" column="1">
              <widget class="QLineEdit" name="Angle_tol">
               <property name="text">
-               <string>15</string>
+               <string>25</string>
               </property>
              </widget>
             </item>
@@ -292,13 +292,6 @@
              <widget class="QLabel" name="label_8">
               <property name="text">
                <string>Lag tolerance</string>
-              </property>
-             </widget>
-            </item>
-            <item row="7" column="1">
-             <widget class="QLineEdit" name="Lag_tol">
-              <property name="text">
-               <string>5</string>
               </property>
              </widget>
             </item>
@@ -316,17 +309,10 @@
               </property>
              </widget>
             </item>
-            <item row="11" column="0">
-             <widget class="QLabel" name="label_10">
+            <item row="7" column="1">
+             <widget class="QLineEdit" name="Lag_tol">
               <property name="text">
-               <string>Number of replicates (TI)</string>
-              </property>
-             </widget>
-            </item>
-            <item row="11" column="1">
-             <widget class="QLineEdit" name="num_ti_replicate">
-              <property name="text">
-               <string>1000</string>
+               <string>5</string>
               </property>
              </widget>
             </item>
@@ -344,10 +330,24 @@
               </property>
              </widget>
             </item>
-            <item row="14" column="1">
-             <widget class="QLineEdit" name="num_prototypes">
+            <item row="11" column="0">
+             <widget class="QLabel" name="label_10">
               <property name="text">
-               <string>100</string>
+               <string>Number of replicates (TI)</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="1">
+             <widget class="QLineEdit" name="num_ti_replicate">
+              <property name="text">
+               <string>-1</string>
+              </property>
+             </widget>
+            </item>
+            <item row="15" column="1">
+             <widget class="QLineEdit" name="num_sel_prototypes">
+              <property name="text">
+               <string>20</string>
               </property>
              </widget>
             </item>
@@ -365,10 +365,17 @@
               </property>
              </widget>
             </item>
-            <item row="15" column="1">
-             <widget class="QLineEdit" name="num_sel_prototypes">
+            <item row="14" column="1">
+             <widget class="QLineEdit" name="num_prototypes">
               <property name="text">
-               <string>20</string>
+               <string>100</string>
+              </property>
+             </widget>
+            </item>
+            <item row="18" column="1">
+             <widget class="QLineEdit" name="kernel_width">
+              <property name="text">
+               <string>0.01</string>
               </property>
              </widget>
             </item>
@@ -376,6 +383,13 @@
              <widget class="QLabel" name="label_12">
               <property name="text">
                <string>Type of distributions</string>
+              </property>
+             </widget>
+            </item>
+            <item row="18" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>kernel width</string>
               </property>
              </widget>
             </item>
@@ -391,86 +405,6 @@
                 <string>Laplacian Kernel</string>
                </property>
               </item>
-             </widget>
-            </item>
-            <item row="18" column="0">
-             <widget class="QLabel" name="label_4">
-              <property name="text">
-               <string>kernel width</string>
-              </property>
-             </widget>
-            </item>
-            <item row="18" column="1">
-             <widget class="QLineEdit" name="kernel_width">
-              <property name="text">
-               <string>0.1</string>
-              </property>
-             </widget>
-            </item>
-            <item row="20" column="0">
-             <widget class="QCheckBox" name="optimize_check">
-              <property name="text">
-               <string>Optimizing kernel width</string>
-              </property>
-              <property name="checked">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="21" column="0">
-             <widget class="QLabel" name="label_13">
-              <property name="text">
-               <string>Maximum iterations</string>
-              </property>
-             </widget>
-            </item>
-            <item row="21" column="1">
-             <widget class="QLineEdit" name="max_num_iteration">
-              <property name="text">
-               <string>500</string>
-              </property>
-             </widget>
-            </item>
-            <item row="22" column="1">
-             <widget class="QLineEdit" name="learning_rate">
-              <property name="text">
-               <string>0.01</string>
-              </property>
-             </widget>
-            </item>
-            <item row="22" column="0">
-             <widget class="QLabel" name="label_14">
-              <property name="text">
-               <string>Learing rate</string>
-              </property>
-             </widget>
-            </item>
-            <item row="23" column="1">
-             <widget class="QLineEdit" name="sigma_lower_bound">
-              <property name="text">
-               <string>0.01</string>
-              </property>
-             </widget>
-            </item>
-            <item row="24" column="1">
-             <widget class="QLineEdit" name="sigma_upper_bound">
-              <property name="text">
-               <string>0.2</string>
-              </property>
-             </widget>
-            </item>
-            <item row="23" column="0">
-             <widget class="QLabel" name="label_15">
-              <property name="text">
-               <string>lower bound of sigma</string>
-              </property>
-             </widget>
-            </item>
-            <item row="24" column="0">
-             <widget class="QLabel" name="label_16">
-              <property name="text">
-               <string>upper bound of sigma</string>
-              </property>
              </widget>
             </item>
            </layout>
