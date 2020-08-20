@@ -124,56 +124,6 @@ bool search_filter::is_admissible(const Geovalue& neigh, const Geovalue& center)
 	//Get the directional lag for each canditate point inside the neighborhood
 	Euclidean_vector v = neigh.location() - center.location();
 
-	//double d = 0;
-	//for (int i = 0; i < GsTLGridVector::dimension; ++i)
-	//{
-	//	//The candidate lag
-	//	d += v[i] * v[i];
-	//}
-	////Exclude points inside a certain range
-	////if (d <= radius_exclu_*radius_exclu_)
-	////{
-	////	return false;
-	////}
-
-
-	//for (int ind = 0; ind < geoms_.size(); ++ind)
-	//{
-	//	//int ind = *iter;
-	//	double l = 0;
-
-	//	double a = 0;
-	//	for (int i = 0; i < GsTLGridVector::dimension; ++i)
-	//	{
-	//		//The reference lag
-	//		a += geoms_[ind][i] * geoms_[ind][i];
-	//		//
-	//		l += v[i] * geoms_[ind][i];
-
-	//	}
-
-	//	double la = std::sqrt(a);
-	//	double l_proj = l / la;
-	//	//out of the range of the lag tolerance
-	//	if (l_proj < la - lag_tol_/2 || l_proj > la + lag_tol_/2)
-	//	{
-	//		continue;
-	//	}
-	//	double l_perp = std::sqrt(d - l_proj * l_proj);
-
-	//	double db = std::sqrt(d) * std::sin(angle_tol_);
-
-	//	double band = db <= l_perp ? db : l_perp;
-
-	//	//out of the range of the bandwidth
-	//	if (l_perp > band/2)
-	//	{
-	//		continue;
-	//	}
-
-	//	return false;
-	//}
-
 	//update the admissible list of neighbor points
 	geoms_.push_back(v);
 
